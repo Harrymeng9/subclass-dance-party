@@ -25,3 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.grandma{
+  border:10px solid red;
+  position: absolute;
+}
+.grandpa{
+  border:5px solid purple;
+  position: absolute;
+}
+
+.lineUpButton{
+  padding:5px 12px;
+  float:left;
+}
