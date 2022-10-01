@@ -12,11 +12,6 @@ describe('grandmaDancer', function() {
     expect(grandmaDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(grandmaDancer.$node, 'toggle');
-    grandmaDancer.step();
-    expect(grandmaDancer.$node.toggle.called).to.be.true;
-  });
 
   describe('dance', function() {
     it('should call step at least once per second', function() {

@@ -12,5 +12,7 @@ makeGrandpaDancer.prototype.step = function() {
 
   this.oldStep();
 
+  //this.setPosition(Math.random() * 1000, Math.random * 1000);
+
   this.$node.toggle();
 };
