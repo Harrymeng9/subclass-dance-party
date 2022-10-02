@@ -21,12 +21,15 @@ $(document).ready(function () {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    // Set up the mouseover function right after making new dancer
+    dancer.$node.mouseover(function(event) {
+      dancer.$node.css('border-color', 'yellow');
+    });
     $('body').append(dancer.$node);
 
     window.dancers.push(dancer);
@@ -34,11 +37,8 @@ $(document).ready(function () {
 
   //
   $('.lineUpButton').on('click', function (event) {
-
-
-
+    // This function make all dancers in the same line
     for (var x = 0; x < window.dancers.length; x++) {
-      console.log(window.dancers[x]);
       window.dancers[x].lineUp(x * 110);
     }
   });
@@ -66,28 +66,6 @@ $(document).ready(function () {
       }
     }
   });
-
-  var review = 0;
-  $('p').mouseover(function(event) {
-    $('p').css('background-color', 'yellow');
-  });
-
-  $('img.dancer.grandma').mouseover(function(event) {
-    $('img.dancer.grandma').css('background-color', 'yellow');
-  });
-
-
-  // $('.dancer').mouseover(function () {
-  //   console.log('get into mouseover function');
-  //   review++;
-  //   $('.chat').text('Welcome to Party x ' + review);
-
-  //   console.log('ran');
-
-  //   // $('.chat').text('testing');
-
-  // });
-
 
 });
 
