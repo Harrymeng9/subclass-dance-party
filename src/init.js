@@ -67,5 +67,27 @@ $(document).ready(function () {
     }
   });
 
+  var review = 0;
+  $('p').mouseover(function(event) {
+    $('p').css('background-color', 'yellow');
+  });
+
+  $('img.dancer.grandma').mouseover(function(event) {
+    $('img.dancer.grandma').css('background-color', 'yellow');
+  });
+
+
+  // $('.dancer').mouseover(function () {
+  //   console.log('get into mouseover function');
+  //   review++;
+  //   $('.chat').text('Welcome to Party x ' + review);
+
+  //   console.log('ran');
+
+  //   // $('.chat').text('testing');
+
+  // });
+
+
 });
 
