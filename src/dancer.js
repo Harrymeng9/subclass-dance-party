@@ -38,8 +38,12 @@ makeDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function(x) {
-  this.setPosition(150, x);
+makeDancer.prototype.lineUp = function(x, y) {
+  if (y !== undefined ) {
+    this.setPosition(y, x);
+  } else {
+    this.setPosition(150, x);
+  }
 };
 
 

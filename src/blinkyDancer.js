@@ -1,6 +1,8 @@
 var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.name = 'blinky';
+
 
   // this.oldStep = makeDancer.prototype.step.bind(this);
   //this.oldStep = makeDancer.prototype.step;
